@@ -47,15 +47,15 @@
     });
   });
 
-  /* Hours: Sun=0 .. Sat=6, hours: Mon-Sat 10:00-19:30, Sun 12:00-18:00 */
+  /* Hours: Sun=0 .. Sat=6, hours: Mon-Sat 10:00-20:00, Sun 12:00-18:00 */
   var HOURS = {
     0: { open: 12 * 60, close: 18 * 60, label: "12:00 PM – 6:00 PM", closeLabel: "6:00 PM" },
-    1: { open: 10 * 60, close: 19 * 60 + 30, label: "10:00 AM – 7:30 PM", closeLabel: "7:30 PM" },
-    2: { open: 10 * 60, close: 19 * 60 + 30, label: "10:00 AM – 7:30 PM", closeLabel: "7:30 PM" },
-    3: { open: 10 * 60, close: 19 * 60 + 30, label: "10:00 AM – 7:30 PM", closeLabel: "7:30 PM" },
-    4: { open: 10 * 60, close: 19 * 60 + 30, label: "10:00 AM – 7:30 PM", closeLabel: "7:30 PM" },
-    5: { open: 10 * 60, close: 19 * 60 + 30, label: "10:00 AM – 7:30 PM", closeLabel: "7:30 PM" },
-    6: { open: 10 * 60, close: 19 * 60 + 30, label: "10:00 AM – 7:30 PM", closeLabel: "7:30 PM" }
+    1: { open: 10 * 60, close: 20 * 60, label: "10:00 AM – 8:00 PM", closeLabel: "8:00 PM" },
+    2: { open: 10 * 60, close: 20 * 60, label: "10:00 AM – 8:00 PM", closeLabel: "8:00 PM" },
+    3: { open: 10 * 60, close: 20 * 60, label: "10:00 AM – 8:00 PM", closeLabel: "8:00 PM" },
+    4: { open: 10 * 60, close: 20 * 60, label: "10:00 AM – 8:00 PM", closeLabel: "8:00 PM" },
+    5: { open: 10 * 60, close: 20 * 60, label: "10:00 AM – 8:00 PM", closeLabel: "8:00 PM" },
+    6: { open: 10 * 60, close: 20 * 60, label: "10:00 AM – 8:00 PM", closeLabel: "8:00 PM" }
   };
 
   var now = new Date();
@@ -90,7 +90,8 @@
           '<span class="catch-name">' + item.name + (item.note ? ' <em>(' + item.note + ')</em>' : '') + '</span>' +
           '<span class="catch-price">MP</span>' +
           '<span class="catch-status ' + (available ? "is-available" : "is-unavailable") + '">' +
-            (available ? "Available" : "Unavailable") +
+            '<span class="catch-status-label">' + (available ? "Available" : "Unavailable") + '</span>' +
+            (available ? '' : '<a href="tel:+12513017964" class="catch-call">Call to confirm</a>') +
           '</span>' +
         '</div>';
     });

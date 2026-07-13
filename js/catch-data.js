@@ -5,7 +5,7 @@
 
   var CATCH_ITEMS = [
     { id: "live-crawfish", name: "Live Crawfish" },
-    { id: "live-blue-crab", name: "Live Blue Crab" },
+    { id: "live-blue-crab", name: "Live Blue Crab", defaultAvailable: false },
     { id: "lump-crab", name: "Lump Crab" },
     { id: "crab-claws-finger", name: "Crab Claws", note: "finger" },
     { id: "dark-claw-meat", name: "Dark Claw Meat" },
@@ -27,8 +27,8 @@
     { id: "flounder-whole", name: "Flounder", note: "whole fish" },
     { id: "speckled-trout-whole", name: "Speckled Trout", note: "whole fish" },
     { id: "pompano-whole", name: "Pompano", note: "whole fish" },
-    { id: "white-trout-whole", name: "White Trout", note: "whole fish" },
-    { id: "ground-mullet-whole", name: "Ground Mullet", note: "whole fish" }
+    { id: "white-trout-whole", name: "White Trout", note: "whole fish, seasonal", defaultAvailable: false },
+    { id: "ground-mullet-whole", name: "Ground Mullet", note: "whole fish, seasonal", defaultAvailable: false }
   ];
 
   var cache = { availability: {}, updatedAt: null };
@@ -51,8 +51,14 @@
       });
   }
 
+  function itemDefault(id) {
+    var item = CATCH_ITEMS.filter(function (i) { return i.id === id; })[0];
+    return !item || item.defaultAvailable !== false;
+  }
+
   function isAvailable(id) {
-    return cache.availability[id] !== false; // default: available
+    var override = cache.availability[id];
+    return typeof override === "boolean" ? override : itemDefault(id);
   }
 
   function getLastUpdated() {

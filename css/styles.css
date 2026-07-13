@@ -334,23 +334,32 @@ a { color: inherit; text-decoration: none; }
   color: var(--yellow);
 }
 .catch-status {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
   font-size: 0.78rem;
   font-weight: 600;
   justify-self: start;
 }
-.catch-status::before {
+.catch-status-label { display: inline-flex; align-items: center; gap: 6px; }
+.catch-status-label::before {
   content: "";
   width: 8px;
   height: 8px;
   border-radius: 50%;
 }
 .catch-status.is-available { color: var(--yellow); }
-.catch-status.is-available::before { background: var(--yellow); }
+.catch-status.is-available .catch-status-label::before { background: var(--yellow); }
 .catch-status.is-unavailable { color: rgba(255,248,236,0.4); }
-.catch-status.is-unavailable::before { background: rgba(255,248,236,0.3); }
+.catch-status.is-unavailable .catch-status-label::before { background: rgba(255,248,236,0.3); }
+.catch-call {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--yellow);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
 .catch-row:has(.is-unavailable) .catch-name { color: rgba(255,248,236,0.45); }
 .catch-row:has(.is-unavailable) .catch-price { color: rgba(255,248,236,0.35); }
 
@@ -544,6 +553,13 @@ a { color: inherit; text-decoration: none; }
   padding: 26px;
   margin: 0;
 }
+.review-stars {
+  display: block;
+  color: var(--yellow);
+  letter-spacing: 2px;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
 .review-card p {
   font-family: var(--font-head);
   font-size: 1.05rem;
@@ -603,6 +619,12 @@ a { color: inherit; text-decoration: none; }
 .hours-table td:first-child { font-family: var(--font-head); font-weight: 600; color: var(--white); width: 40%; }
 .hours-table tr.today td { color: var(--yellow); font-weight: 700; }
 .hours-table tr.today td:first-child { color: var(--yellow); }
+
+.hours-note {
+  font-size: 0.86rem;
+  color: rgba(255,248,236,0.55);
+  margin: 14px 0 0;
+}
 
 .hours-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 8px; }
 
