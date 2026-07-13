@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Seafood House | Fresh · Fried · Steamed — Mobile, AL</title>
+<meta name="description" content="The Seafood House in Mobile, AL — fresh fried and steamed seafood, po'boys, and combo dinners. Fast, friendly, counter-service. Call ahead for pickup.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="icon" href="assets/images/logo.png">
+</head>
+<body>
+
+<div class="announce-bar">
+  <p>📍 751 Azalea Rd, Mobile, AL &nbsp;·&nbsp; <a href="tel:+12513017964">(251) 301-7964</a> &nbsp;·&nbsp; <span id="announceStatus">Loading hours…</span></p>
+</div>
+
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="#top" class="brand">
+      <img src="assets/images/logo.png" alt="The Seafood House logo" class="brand-logo">
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="#menu">Menu</a>
+      <a href="#catch">Today's Catch</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#order">Order</a>
+      <a href="#hours">Hours &amp; Location</a>
+    </nav>
+
+    <div class="header-actions">
+      <a href="https://www.facebook.com/share/1DWHCMRmLq/?mibextid=wwXIfr" target="_blank" rel="noopener" class="social-link" aria-label="The Seafood House on Facebook">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5h2.5l.5-3H13.5V8.5c0-.9.25-1.5 1.55-1.5H16.5V4.35C16.2 4.3 15.2 4.2 14.05 4.2c-2.4 0-4.05 1.45-4.05 4.15V10.5H7.5v3H10V21h3.5Z"/></svg>
+      </a>
+      <a href="tel:+12513017964" class="btn btn-ghost header-call">(251) 301-7964</a>
+      <a href="#order" class="btn btn-primary">Order Now</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mainNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-content">
+      <img src="assets/images/logo.png" alt="The Seafood House" class="hero-logo">
+      <h1>Fresh. Fried. <span>Steamed.</span></h1>
+      <p class="hero-sub">Real Gulf seafood out of Mobile, AL — po'boys, combo dinners, and a full seafood market. Order ahead and it's ready when you walk in.</p>
+      <div class="hero-actions">
+        <a href="#order" class="btn btn-light btn-lg">Order for Pickup</a>
+        <a href="#menu" class="btn btn-outline-light btn-lg">See the Menu</a>
+      </div>
+      <div class="hero-meta">
+        <div class="hero-meta-item">
+          <strong>★ 4.5</strong>
+          <span>150+ Yelp reviews</span>
+        </div>
+        <div class="hero-meta-item">
+          <strong>10–7:30</strong>
+          <span>Open Mon–Sat</span>
+        </div>
+        <div class="hero-meta-item">
+          <strong>$$</strong>
+          <span>Counter service</span>
+        </div>
+      </div>
+    </div>
+    <svg class="hero-wave" viewBox="0 0 1440 44" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,18 C360,40 1080,0 1440,20 L1440,44 L0,44 Z" fill="var(--cream)"></path>
+    </svg>
+  </section>
+
+  <!-- HIGHLIGHTS -->
+  <section class="highlights">
+    <div class="container">
+      <p class="highlights-intro">A seafood market and fry kitchen on the corner of Azalea &amp; Cottage Hill since 2015 — pick your seafood fresh from the case, or let the kitchen fry it up golden and bag it to go.</p>
+      <div class="highlights-grid">
+        <div class="highlight-card">
+          <span class="hi-icon">🕒</span>
+          <h3 id="todayHoursText">Loading hours…</h3>
+          <p>Open today</p>
+        </div>
+        <div class="highlight-card">
+          <span class="hi-icon">🥡</span>
+          <h3>Takeout Only</h3>
+          <p>Counter order, no dine-in wait</p>
+        </div>
+        <div class="highlight-card">
+          <span class="hi-icon">🦐</span>
+          <h3>Market Fresh</h3>
+          <p>Buy by the pound, we'll steam it</p>
+        </div>
+        <div class="highlight-card">
+          <span class="hi-icon">💳</span>
+          <h3>Cash &amp; Cards</h3>
+          <p>All major cards accepted</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TODAY'S CATCH -->
+  <section class="catch-section" id="catch">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">The Fresh Case</p>
+        <h2>Today's Catch</h2>
+        <p class="section-sub">Live and whole seafood sold by the pound at the market counter, priced daily. Availability changes with what came in — call ahead to confirm before you drive over.</p>
+      </div>
+
+      <div class="catch-board" id="catchBoard">
+        <div class="catch-row catch-row-head" aria-hidden="true">
+          <span>Item</span>
+          <span>Price</span>
+          <span>Status</span>
+        </div>
+      </div>
+      <p class="catch-disclaimer">MP = Market Price, set daily on what's fresh. Call <a href="tel:+12513017964">(251) 301-7964</a> to confirm today's actual stock and pricing. <span id="catchUpdatedAt"></span></p>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section class="menu-section" id="menu">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">The Menu</p>
+        <h2>What's Cooking</h2>
+        <p class="section-sub">Prices may vary slightly in-store — call ahead to confirm.</p>
+      </div>
+
+      <div class="menu-tabs" id="menuTabs" role="tablist" aria-label="Menu categories">
+        <button class="menu-tab active" data-target="popular" role="tab" aria-selected="true">★ Popular</button>
+        <button class="menu-tab" data-target="dinners" role="tab" aria-selected="false">Seafood Dinners</button>
+        <button class="menu-tab" data-target="combos" role="tab" aria-selected="false">Combos</button>
+        <button class="menu-tab" data-target="chicken" role="tab" aria-selected="false">Chicken</button>
+        <button class="menu-tab" data-target="poboys" role="tab" aria-selected="false">Po'Boys</button>
+        <button class="menu-tab" data-target="market" role="tab" aria-selected="false">By the Pound</button>
+        <button class="menu-tab" data-target="kids" role="tab" aria-selected="false">Kids</button>
+        <button class="menu-tab" data-target="appetizers" role="tab" aria-selected="false">Appetizers</button>
+        <button class="menu-tab" data-target="soups-salads" role="tab" aria-selected="false">Soups &amp; Salads</button>
+        <button class="menu-tab" data-target="sides" role="tab" aria-selected="false">Sides &amp; Drinks</button>
+      </div>
+
+      <div class="menu-panels">
+
+        <div class="menu-panel active" id="popular" role="tabpanel">
+          <div class="menu-list menu-list-cols">
+            <div class="menu-item"><h4>6. Fish &amp; Shrimp</h4><span class="price">$12.99</span></div>
+            <div class="menu-item"><h4>3. Fish</h4><span class="price">$11.99</span></div>
+            <div class="menu-item"><h4>5. Crab Claws</h4><span class="price">$18.99</span></div>
+            <div class="menu-item"><h4>2. Shrimp</h4><span class="price">$11.99</span></div>
+            <div class="menu-item"><h4>9. Shrimp &amp; Crab Claws</h4><span class="price">$15.99</span></div>
+            <div class="menu-item"><h4>18. Shrimp Po'Boy <span>(full)</span></h4><span class="price">$17.99</span></div>
+            <div class="menu-item"><h4>Gumbo <span>(bowl)</span></h4><span class="price">$7.99</span></div>
+          </div>
+        </div>
+
+        <div class="menu-panel" id="dinners" role="tabpanel">
+          <p class="menu-note">Seafood dinners, served with your choice of sides.</p>
+          <div class="menu-list menu-list-cols">
+            <div class="menu-item"><h4>1. Popcorn Shrimp</h4><span class="price">$10.99</span></div>
+            <div class="menu-item"><h4>2. Shrimp</h4><span class="price">$11.99</span></div>
+            <div class="menu-item"><h4>3. Fish</h4><span class="price">$11.99</span></div>
+            <div class="menu-item"><h4>4. Oysters</h4><span class="price">$18.99</span></div>
+            <div class="menu-item"><h4>5. Crab Claws</h4><span class="price">$18.99</span></div>
+          </div>
+        </div>
+
+        <div class="menu-panel" id="combos" role="tabpanel">
+          <h4 class="menu-subhead">Combo of Two</h4>
+          <div class="menu-list menu-list-cols">
+            <div class="menu-item"><h4>6. Fish &amp; Shrimp</h4><span class="price">$12.99</span></div>
+            <div class="menu-item"><h4>7. Fish &amp; Crab Claws</h4><span class="price">$15.99</span></div>
+            <div class="menu-item"><h4>8. Fish &amp; Oysters</h4><span class="price">$17.99</span></div>
+            <div class="menu-item"><h4>9. Shrimp &amp; Crab Claws</h4><span class="price">$15.99</span></div>
+            <div class="menu-item"><h4>10. Shrimp &amp; Oysters</h4><span class="price">$17.99</span></div>
+            <div class="menu-item"><h4>11. Crab Claws &amp; Oysters</h4><span class="price">$19.99</span></div>
+          </div>
+          <h4 class="menu-subhead">Combo of Three &amp; Four</h4>
+          <div class="menu-list menu-list-cols">
+            <div class="menu-item"><h4>12. Fish, Shrimp &amp; Oysters</h4><span class="price">$22.99</span></div>
+            <div class="menu-item"><h4>13. Fish, Shrimp &amp; Crab Claws</h4><span class="price">$22.99</span></div>
+            <div class="menu-item"><h4>13B. Fish, Oysters &amp; Crab Claws</h4><span class="price">$23.99</span></div>
+            <div class="menu-item"><h4>13C. Shrimp, Claws &amp; Oysters</h4><span class="price">$23.99</span></div>
+            <div class="menu-item"><h4>14. Fish, Shrimp, Claws &amp; Oysters</h4><span class="price">$24.99</span></div>
+          </div>
+        </div>
+
+        <div class="menu-panel" id="chicken" role="tabpanel">
+          <p class="menu-note">Chicken dinners, served with your choice of sides.</p>
+          <div class="menu-list menu-list-cols">
+            <div class="menu-item"><h4>15. Tenders</h4><span class="price">$10.99</span></div>
+            <div class="menu-item"><h4>16. Wings <span>(6 pc)</span></h4><span class="price">$7.99</span></div>
+            <div class="menu-item"><h4>16. Wings <span>(10 pc)</span></h4><span class="price">$11.99</span></div>
+            <div class="menu-item"><h4>17. Turkey Neck w/ Rice</h4><span class="price">$11.99</span></div>
+          </div>
+        </div>
+
+        <div class="menu-panel" id="poboys" role="tabpanel">
+          <p class="menu-note">All po'boys served with fries.</p>
+          <div class="menu-list menu-list-cols">
+            <div class="menu-item"><h4>18. Shrimp Po'Boy <span>(half)</span></h4><span class="price">$9.99</span></div>
+            <div class="menu-item"><h4>18. Shrimp Po'Boy <span>(full)</span></h4><span class="price">$17.99</span></div>
+            <div class="menu-item"><h4>19. Fish Po'Boy <span>(half)</span></h4><span class="price">$9.99</span></div>
+            <div class="menu-item"><h4>19. Fish Po'Boy <span>(full)</span></h4><span class="price">$17.99</span></div>
+            <div class="menu-item"><h4>20. Oyster Po'Boy <span>(half)</span></h4><span class="price">$11.99</span></div>
+            <div class="menu-item"><h4>20. Oyster Po'Boy <span>(full)</span></h4><span class="price">$22.99</span></div>
+            <div class="menu-item"><h4>21. Soft Shell Crab Po'Boy</h4><span class="price">MP</span></div>
+          </div>
+        </div>
+
+        <div class="menu-panel" id="market" role="tabpanel">
+          <p class="menu-note">Fried or steamed, sold by the pound.</p>
+          <div class="menu-list menu-list-cols">
+            <div class="menu-item"><h4>22. Shrimp <span>(½ lb)</span></h4><span class="price">$10.99</span></div>
+            <div class="menu-item"><h4>22. Shrimp <span>(lb)</span></h4><span class="price">$19.99</span></div>
+            <div class="menu-item"><h4>23. Crab Claws <span>(½ lb)</span></h4><span class="price">$18.99</span></div>
+            <div class="menu-item"><h4>23. Crab Claws <span>(lb)</span></h4><span class="price">$37.99</span></div>
+            <div class="menu-item"><h4>24. Oyster <span>(½ lb)</span></h4><span class="price">$18.99</span></div>
+            <div class="menu-item"><h4>24. Oyster <span>(lb)</span></h4><span class="price">$37.99</span></div>
+            <div class="menu-item"><h4>25. Popcorn Shrimp <span>(½ lb)</span></h4><span class="price">$9.99</span></div>
+            <div class="menu-item"><h4>25. Popcorn Shrimp <span>(lb)</span></h4><span class="price">$18.99</span></div>
+          </div>
+        </div>
+
+        <div class="menu-panel" id="kids" role="tabpanel">
+          <p class="menu-note">All kids meals served with fries.</p>
+          <div class="menu-list menu-list-cols">
+            <div class="menu-item"><h4>26. Popcorn Shrimp</h4><span class="price">$6.99</span></div>
+            <div class="menu-item"><h4>27. Chicken Tenders</h4><span class="price">$6.99</span></div>
+            <div class="menu-item"><h4>28. Fish</h4><span class="price">$6.99</span></div>
+            <div class="menu-item"><h4>29. Corn Dog</h4><span class="price">$5.99</span></div>
+            <div class="menu-item"><h4>30. Wings</h4><span class="price">$6.99</span></div>
+          </div>
+        </div>
+
+        <div class="menu-panel" id="appetizers" role="tabpanel">
+          <div class="menu-list menu-list-cols">
+            <div class="menu-item"><h4>Crab Cakes <span>(2 pcs)</span></h4><span class="price">$7.99</span></div>
+            <div class="menu-item"><h4>Stuffed Crab</h4><span class="price">MP</span></div>
+            <div class="menu-item"><h4>Homemade Eggroll <span>(4 pcs)</span></h4><span class="price">$6.99</span></div>
+            <div class="menu-item"><h4>Fried Pickles</h4><span class="price">$3.99</span></div>
+            <div class="menu-item"><h4>Seafood House Fries</h4><span class="price">$8.99</span></div>
+          </div>
+        </div>
+
+        <div class="menu-panel" id="soups-salads" role="tabpanel">
+          <h4 class="menu-subhead">Soups</h4>
+          <div class="menu-list menu-list-cols">
+            <div class="menu-item"><h4>Gumbo <span>(cup)</span></h4><span class="price">$5.99</span></div>
+            <div class="menu-item"><h4>Gumbo <span>(bowl)</span></h4><span class="price">$7.99</span></div>
+          </div>
+          <h4 class="menu-subhead">Salads</h4>
+          <div class="menu-list menu-list-cols">
+            <div class="menu-item"><h4>Fried Shrimp Salad</h4><span class="price">$7.99</span></div>
+            <div class="menu-item"><h4>Grilled Shrimp Salad</h4><span class="price">$7.99</span></div>
+            <div class="menu-item"><h4>Chicken Tender Salad</h4><span class="price">$7.99</span></div>
+          </div>
+        </div>
+
+        <div class="menu-panel" id="sides" role="tabpanel">
+          <h4 class="menu-subhead">Sides</h4>
+          <div class="menu-list menu-list-cols">
+            <div class="menu-item"><h4>French Fries</h4><span class="price">$2.99</span></div>
+            <div class="menu-item"><h4>Fried Onion Rings</h4><span class="price">$2.99</span></div>
+            <div class="menu-item"><h4>Fried Hush Puppies</h4><span class="price">$2.99</span></div>
+            <div class="menu-item"><h4>Fried Okra</h4><span class="price">$2.99</span></div>
+            <div class="menu-item"><h4>Steamed Corn</h4><span class="price">$0.79</span></div>
+            <div class="menu-item"><h4>Steamed Potato</h4><span class="price">$0.79</span></div>
+            <div class="menu-item"><h4>Cole Slaw</h4><span class="price">$1.99</span></div>
+            <div class="menu-item"><h4>Potato Salad</h4><span class="price">$1.99</span></div>
+          </div>
+          <h4 class="menu-subhead">Add-Ons</h4>
+          <div class="menu-list menu-list-cols">
+            <div class="menu-item"><h4>Steamed Onion</h4><span class="price">$2.99</span></div>
+            <div class="menu-item"><h4>Boiled Egg</h4><span class="price">$0.99</span></div>
+            <div class="menu-item"><h4>Sausage</h4><span class="price">$2.49</span></div>
+          </div>
+          <h4 class="menu-subhead">Drinks <span class="menu-subhead-note">20oz — $2.39 each</span></h4>
+          <div class="menu-list menu-list-cols">
+            <div class="menu-item"><h4>Sweet Tea</h4></div>
+            <div class="menu-item"><h4>Coke</h4></div>
+            <div class="menu-item"><h4>Diet Coke</h4></div>
+            <div class="menu-item"><h4>Sprite</h4></div>
+            <div class="menu-item"><h4>Pink Lemonade</h4></div>
+            <div class="menu-item"><h4>Orange</h4></div>
+            <div class="menu-item"><h4>Root Beer</h4></div>
+            <div class="menu-item"><h4>Strawberry</h4></div>
+            <div class="menu-item"><h4>Fruit Punch</h4></div>
+          </div>
+
+          <div class="callout-row">
+            <div class="callout-tag">
+              <h5>Butter Cups</h5>
+              <p>Big (4oz) <strong>$2.00</strong> · Small (2oz) <strong>$1.00</strong><br>Add seasoning <strong>+$1.00</strong> each</p>
+            </div>
+            <div class="callout-tag">
+              <h5>Dipping Sauce — $0.75 each</h5>
+              <p>Cocktail, Tartar, Ranch, Honey Mustard, BBQ, Buffalo, Boom Boom</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="reviews-section" id="reviews">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">Word on the Street</p>
+        <h2>What Mobile Is Saying</h2>
+        <div class="rating-badges">
+          <span class="rating-badge">★ 4.5 · Yelp (150+)</span>
+          <span class="rating-badge">★ 4.3 · Tripadvisor (28)</span>
+        </div>
+      </div>
+      <div class="reviews-grid">
+        <blockquote class="review-card">
+          <p>"Crawfish is absolutely amazing, the best in town! Fried fish platter also delicious and fried to perfection."</p>
+          <cite>— Tripadvisor Review</cite>
+        </blockquote>
+        <blockquote class="review-card">
+          <p>"The shrimp po'boy was fantastic — the fried shrimp are large and seasoned well."</p>
+          <cite>— Yelp Review</cite>
+        </blockquote>
+        <blockquote class="review-card">
+          <p>"Gumbo is to die for! What I love about this place, the fried food isn't overly salted."</p>
+          <cite>— Tripadvisor Review</cite>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ORDER -->
+  <section class="order-section" id="order">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">Get Your Fix</p>
+        <h2>Order for Pickup</h2>
+        <p class="section-sub">Takeout only — call ahead and it'll be ready, or order delivery through Grubhub.</p>
+      </div>
+
+      <div class="order-grid">
+        <div class="order-card order-card-featured">
+          <span class="oc-icon">📞</span>
+          <h3>Call to Order</h3>
+          <p>Fastest way to get started — we'll have it ready when you arrive.</p>
+          <a class="btn btn-light" href="tel:+12513017964">(251) 301-7964</a>
+        </div>
+        <div class="order-card">
+          <span class="oc-icon">🛵</span>
+          <h3>Order Delivery</h3>
+          <p>Order online through Grubhub for delivery or scheduled pickup.</p>
+          <a class="btn btn-outline" href="https://www.grubhub.com/restaurant/the-seafood-house-751-azalea-road-mobile/1678417" target="_blank" rel="noopener">Order on Grubhub</a>
+        </div>
+        <div class="order-card">
+          <span class="oc-icon">🏪</span>
+          <h3>Walk In</h3>
+          <p>Stop by the market counter and pick your seafood fresh, by the pound.</p>
+          <a class="btn btn-outline" href="#hours">Get Directions</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOURS & LOCATION -->
+  <section class="hours-section" id="hours">
+    <div class="container hours-grid">
+      <div class="hours-card">
+        <p class="eyebrow">Visit Us</p>
+        <h2>Hours &amp; Location</h2>
+        <table class="hours-table" id="hoursTable">
+          <tbody>
+            <tr data-day="1"><td>Monday</td><td>10:00 AM – 7:30 PM</td></tr>
+            <tr data-day="2"><td>Tuesday</td><td>10:00 AM – 7:30 PM</td></tr>
+            <tr data-day="3"><td>Wednesday</td><td>10:00 AM – 7:30 PM</td></tr>
+            <tr data-day="4"><td>Thursday</td><td>10:00 AM – 7:30 PM</td></tr>
+            <tr data-day="5"><td>Friday</td><td>10:00 AM – 7:30 PM</td></tr>
+            <tr data-day="6"><td>Saturday</td><td>10:00 AM – 7:30 PM</td></tr>
+            <tr data-day="0"><td>Sunday</td><td>12:00 PM – 6:00 PM</td></tr>
+          </tbody>
+        </table>
+        <div class="hours-actions">
+          <a class="btn btn-light" href="https://www.google.com/maps/dir/?api=1&destination=751+Azalea+Rd,+Mobile,+AL+36693" target="_blank" rel="noopener">Get Directions</a>
+          <a class="btn btn-outline-light" href="tel:+12513017964">Call the Restaurant</a>
+        </div>
+      </div>
+
+      <div class="location-card">
+        <span class="loc-icon">📍</span>
+        <h3>751 Azalea Rd</h3>
+        <p>Mobile, AL 36693</p>
+        <p class="muted">Corner of Azalea Rd &amp; Cottage Hill Rd</p>
+        <div class="location-divider"></div>
+        <h3><a href="tel:+12513017964">(251) 301-7964</a></h3>
+        <p class="muted">Takeout only · Cash &amp; cards accepted</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <img src="assets/images/logo.png" alt="The Seafood House" class="footer-logo">
+      <p>Fresh Gulf seafood, fried or steamed to order, right on Azalea Rd in Mobile, AL.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p>751 Azalea Rd<br>Mobile, AL 36693</p>
+      <p><a href="tel:+12513017964">(251) 301-7964</a></p>
+      <p><a href="https://www.facebook.com/share/1DWHCMRmLq/?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook</a></p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Hours</h4>
+      <p>Mon – Sat: 10:00 AM – 7:30 PM</p>
+      <p>Sunday: 12:00 PM – 6:00 PM</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <p><a href="#menu">Menu</a></p>
+      <p><a href="#order">Order Pickup</a></p>
+      <p><a href="#hours">Directions</a></p>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>&copy; <span id="year"></span> The Seafood House · Mobile, AL. Menu &amp; hours subject to change — please call to confirm.</p>
+  </div>
+</footer>
+
+<a href="tel:+12513017964" class="mobile-cta">
+  <span>📞 Call to Order</span>
+</a>
+
+<script src="js/catch-data.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "name": "the-seafood-house-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "The Seafood House website — static site + small JSON API for Today's Catch availability.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

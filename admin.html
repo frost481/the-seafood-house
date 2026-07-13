@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Staff Admin — Today's Catch | The Seafood House</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/admin.css">
+<link rel="icon" href="assets/images/logo.png">
+</head>
+<body class="admin-body">
+
+<header class="admin-header">
+  <div class="container admin-header-inner">
+    <img src="assets/images/logo.png" alt="The Seafood House" class="admin-logo">
+    <div>
+      <h1>Today's Catch — Staff Admin</h1>
+      <p>Toggle what's in stock. Changes show on the live site immediately, everywhere.</p>
+    </div>
+  </div>
+</header>
+
+<main class="container admin-main">
+
+  <div class="admin-notice">
+    <strong>Heads up:</strong> this page isn't linked from the public site — don't share this URL. Changes here now save to the server and sync to <strong>every device</strong> instantly, including customers' phones. You'll need the admin token (shown in the server's console/logs on startup, or set by whoever deployed the site) to make changes.
+  </div>
+
+  <div class="admin-auth" id="adminAuth">
+    <label for="tokenInput">Admin Token</label>
+    <div class="admin-auth-row">
+      <input type="password" id="tokenInput" placeholder="Paste the token shown in the server console">
+      <button class="btn btn-primary" id="tokenSave">Unlock</button>
+    </div>
+    <p class="admin-auth-hint">Find this in the terminal/log where the server was started, or ask whoever deployed the site.</p>
+    <p class="admin-auth-error" id="authError" hidden></p>
+  </div>
+
+  <div class="admin-panel" id="adminPanel" hidden>
+    <div class="admin-toolbar">
+      <div>
+        <span id="lastUpdated" class="admin-stamp">Loading…</span>
+      </div>
+      <div class="admin-bulk-actions">
+        <button class="btn btn-outline" id="markAllAvailable">Mark All Available</button>
+        <button class="btn btn-ghost" id="markAllUnavailable">Mark All Unavailable</button>
+        <button class="btn btn-ghost" id="signOut">Sign Out</button>
+      </div>
+    </div>
+
+    <div class="admin-list" id="adminList"></div>
+  </div>
+
+  <a href="index.html#catch" class="btn btn-primary admin-back">View Live Site</a>
+</main>
+
+<script src="js/catch-data.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>
