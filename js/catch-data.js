@@ -4,7 +4,7 @@
   "use strict";
 
   var CATCH_ITEMS = [
-    { id: "live-crawfish", name: "Live Crawfish" },
+    { id: "live-crawfish", name: "Live Crawfish", defaultAvailable: false },
     { id: "live-blue-crab", name: "Live Blue Crab", defaultAvailable: false },
     { id: "lump-crab", name: "Lump Crab" },
     { id: "crab-claws-finger", name: "Crab Claws", note: "finger" },
