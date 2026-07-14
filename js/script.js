@@ -47,15 +47,15 @@
     });
   });
 
-  /* Hours: Sun=0 .. Sat=6, hours: Mon-Sat 10:00-20:00, Sun 12:00-18:00 */
+  /* Hours: Sun=0 .. Sat=6, hours: Mon-Sat 10:30-20:00, Sun 12:00-18:00 */
   var HOURS = {
     0: { open: 12 * 60, close: 18 * 60, label: "12:00 PM – 6:00 PM", closeLabel: "6:00 PM" },
-    1: { open: 10 * 60, close: 20 * 60, label: "10:00 AM – 8:00 PM", closeLabel: "8:00 PM" },
-    2: { open: 10 * 60, close: 20 * 60, label: "10:00 AM – 8:00 PM", closeLabel: "8:00 PM" },
-    3: { open: 10 * 60, close: 20 * 60, label: "10:00 AM – 8:00 PM", closeLabel: "8:00 PM" },
-    4: { open: 10 * 60, close: 20 * 60, label: "10:00 AM – 8:00 PM", closeLabel: "8:00 PM" },
-    5: { open: 10 * 60, close: 20 * 60, label: "10:00 AM – 8:00 PM", closeLabel: "8:00 PM" },
-    6: { open: 10 * 60, close: 20 * 60, label: "10:00 AM – 8:00 PM", closeLabel: "8:00 PM" }
+    1: { open: 10 * 60 + 30, close: 20 * 60, label: "10:30 AM – 8:00 PM", closeLabel: "8:00 PM" },
+    2: { open: 10 * 60 + 30, close: 20 * 60, label: "10:30 AM – 8:00 PM", closeLabel: "8:00 PM" },
+    3: { open: 10 * 60 + 30, close: 20 * 60, label: "10:30 AM – 8:00 PM", closeLabel: "8:00 PM" },
+    4: { open: 10 * 60 + 30, close: 20 * 60, label: "10:30 AM – 8:00 PM", closeLabel: "8:00 PM" },
+    5: { open: 10 * 60 + 30, close: 20 * 60, label: "10:30 AM – 8:00 PM", closeLabel: "8:00 PM" },
+    6: { open: 10 * 60 + 30, close: 20 * 60, label: "10:30 AM – 8:00 PM", closeLabel: "8:00 PM" }
   };
 
   var now = new Date();
